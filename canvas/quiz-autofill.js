@@ -28,7 +28,7 @@
   }
   
   var getSuggestion = (preSuf) => {
-    let regex = new RegExp(`${preSuf[0]}\\w*${preSuf[1]}`, 'g');
+    let regex = new RegExp(`${preSuf[0]}\\w*${preSuf[1]}`, 'gi');
     let ans = window.vocabList.filter((word) => word.match(regex)).toString();
     return ans;
   }
